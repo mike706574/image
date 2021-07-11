@@ -1,0 +1,1 @@
+web: java -jar target/image-1.0.jar
