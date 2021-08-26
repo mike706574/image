@@ -11,3 +11,8 @@ pre.terminal {
     word-wrap: break-word;
     margin-bottom: 1em;
 }
+
+input[type=submit]:disabled,
+input[type=submit][disabled]{
+  color: #999;
+}

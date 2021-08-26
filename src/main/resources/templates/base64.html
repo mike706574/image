@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Image</title>
+    <meta name="description" content="Index page">
+    <meta name="author" content="mike706574">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="content" class="column" style="margin-top: 10%">
+          <h1>Base64 Encoding</h1>
+          <p>This base64 encodes an image.</p>
+          <form action="/base64"
+                method="post"
+                enctype="multipart/form-data">
+            <label for="image">
+              Image
+            </label>
+            <input type="file"
+                   name="image"
+                   id="image"
+                   onchange="onFileChange(event)" />
+            <input type="submit"
+                   name="submit"
+                   id="submit"
+                   value="Submit"
+                   disabled />
+          </form>
+          <pre class="terminal" th:text="${output}" />
+        </div>
+      </div>
+    </div>
+    <script>
+      function onFileChange(event) {
+        const element = document.querySelector('#submit');
+        console.log(element);
+        console.log(event === "");
+        element.disabled = event === "";
+      }
+    </script>
+  </body>
+</html>
