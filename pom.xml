@@ -7,13 +7,14 @@
   <artifactId>image</artifactId>
   <version>1.0</version>
 
+  <name>image</name>
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.5.2</version>
     <relativePath/>
   </parent>
-  <name>image</name>
 
   <properties>
     <java.version>16</java.version>
@@ -56,6 +57,7 @@
   </dependencies>
 
   <build>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>

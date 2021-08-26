@@ -9,13 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class FooController {
-    private final FooService fooService;
-
-    public FooController(FooService fooService) {
-        this.fooService = fooService;
-    }
-
+public record FooController(FooService fooService) {
     @GetMapping(path = "/foos", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Foo> getFoos() {
         return fooService.getAllFoos();

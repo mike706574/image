@@ -1,0 +1,15 @@
+{
+  "watch": [
+    "src/",
+    "pom.xml"
+  ],
+  "execMap": {
+    "sh": "sh"
+  },
+  "ignore": [
+    "*/build"
+  ],
+  "ext": "*",
+  "delay": 1,
+  "signal": "SIGINT"
+}
