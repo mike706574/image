@@ -4,6 +4,6 @@ WORKDIR /tmp/run
 
 ADD . /tmp/run
 
-RUN mvn compile
+RUN mvn package
 
 ENTRYPOINT ["./entrypoint.sh"]
